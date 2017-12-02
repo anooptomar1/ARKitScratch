@@ -49,6 +49,9 @@ private extension ViewController {
                         plane.materials.first?.diffuse.contents = UIColor.red
                     }
                 }
+                
+                self.arView.hitTest(pos)
+                    .filter { self.virtualObject.childNodes.contains($0.node) }.first?.node.geometry?.materials.first?.diffuse.contents = UIColor.blue
         }
     }
     
@@ -61,9 +64,23 @@ private extension ViewController {
         arView.scene = SCNScene(named: "art.scnassets/ship.scn")!
         let configuration = ARWorldTrackingConfiguration()
         configuration.planeDetection = .horizontal
+        
         arView.delegate = self
+        arView.session.delegate = self
         arView.debugOptions = [ARSCNDebugOptions.showFeaturePoints]
         arView.session.run(configuration)
+    }
+}
+
+extension ViewController: ARSessionDelegate {
+    func session(_ session: ARSession, didUpdate frame: ARFrame) {
+        let matrix = SCNMatrix4(frame.camera.transform)
+        let cameraPosition = SCNVector3(matrix.m41, matrix.m42, matrix.m43)
+        let vector = SCNVector3Make(virtualObject.position.x - cameraPosition.x,
+                                    virtualObject.position.y - cameraPosition.y,
+                                    virtualObject.position.z - cameraPosition.z)
+        let angle = atan2f(vector.x, vector.z)
+        virtualObject.rotation = SCNVector4Make(0, 1, 0, angle + .pi)
     }
 }
 
@@ -80,11 +97,5 @@ extension ViewController: ARSCNViewDelegate {
             node.addChildNode(planeNode)
             node.addChildNode(self.virtualObject)
         }
-    }
-}
-
-extension ViewController: ARSessionDelegate {
-    func session(_ session: ARSession, didUpdate frame: ARFrame) {
-        
     }
 }
