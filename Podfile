@@ -8,4 +8,5 @@ target 'ARKitScratch' do
   # Pods for ARKitScratch
   pod 'ReactiveSwift', '~> 3.0.0'
   pod 'ReactiveCocoa', '~> 7.0.1'
+  pod 'Showcase'
 end

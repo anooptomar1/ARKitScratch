@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1ls-bZ-NRN">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Basic View Controller-->
+        <scene sceneID="v4e-Ez-g7Z">
+            <objects>
+                <viewController id="1ls-bZ-NRN" customClass="BasicViewController" customModule="ARKitScratch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5k1-tz-nsl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wDf-ff-NL5" customClass="ARSCNView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="500"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="500" id="Tow-bY-ZYn"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Basic ARKit Demo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vZw-PH-ne0">
+                                <rect key="frame" x="41.5" y="510" width="292" height="42"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                                <color key="textColor" red="0.40000000600000002" green="1" blue="1" alpha="0.42834974320000002" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vZw-PH-ne0" firstAttribute="centerX" secondItem="5k1-tz-nsl" secondAttribute="centerX" id="GuK-Ot-A3O"/>
+                            <constraint firstItem="vZw-PH-ne0" firstAttribute="top" secondItem="wDf-ff-NL5" secondAttribute="bottom" constant="10" id="d6w-vP-ZBm"/>
+                            <constraint firstItem="WOE-bx-Ob0" firstAttribute="trailing" secondItem="wDf-ff-NL5" secondAttribute="trailing" id="gjP-NC-q54"/>
+                            <constraint firstItem="wDf-ff-NL5" firstAttribute="top" secondItem="5k1-tz-nsl" secondAttribute="top" id="o32-uA-dPJ"/>
+                            <constraint firstItem="wDf-ff-NL5" firstAttribute="leading" secondItem="WOE-bx-Ob0" secondAttribute="leading" id="zPg-zw-aSW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="WOE-bx-Ob0"/>
+                    </view>
+                    <connections>
+                        <outlet property="arView" destination="wDf-ff-NL5" id="XJa-iA-tcb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W2f-PW-JRF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="40.799999999999997" y="108.39580209895054"/>
+        </scene>
+    </scenes>
+</document>
