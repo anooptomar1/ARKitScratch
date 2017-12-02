@@ -12,6 +12,7 @@
 		FAD38D241FD28F9B00A9AC88 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAD38D221FD28F9B00A9AC88 /* Main.storyboard */; };
 		FAD38D261FD28F9B00A9AC88 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAD38D251FD28F9B00A9AC88 /* Assets.xcassets */; };
 		FAD38D291FD28F9B00A9AC88 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAD38D271FD28F9B00A9AC88 /* LaunchScreen.storyboard */; };
+		FAFF229D1FD292B9005D97B2 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = FAFF229C1FD292B9005D97B2 /* art.scnassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		FAD38D251FD28F9B00A9AC88 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FAD38D281FD28F9B00A9AC88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FAD38D2A1FD28F9B00A9AC88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAFF229C1FD292B9005D97B2 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				FAD38D1E1FD28F9B00A9AC88 /* AppDelegate.swift */,
 				FAD38D201FD28F9B00A9AC88 /* ViewController.swift */,
 				FAD38D221FD28F9B00A9AC88 /* Main.storyboard */,
+				FAFF229C1FD292B9005D97B2 /* art.scnassets */,
 				FAD38D251FD28F9B00A9AC88 /* Assets.xcassets */,
 				FAD38D271FD28F9B00A9AC88 /* LaunchScreen.storyboard */,
 				FAD38D2A1FD28F9B00A9AC88 /* Info.plist */,
@@ -124,6 +127,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAD38D291FD28F9B00A9AC88 /* LaunchScreen.storyboard in Resources */,
+				FAFF229D1FD292B9005D97B2 /* art.scnassets in Resources */,
 				FAD38D261FD28F9B00A9AC88 /* Assets.xcassets in Resources */,
 				FAD38D241FD28F9B00A9AC88 /* Main.storyboard in Resources */,
 			);
