@@ -2,58 +2,89 @@
 //  ViewController.swift
 //  ARKitScratch
 //
-//  Created by Yuya Horita on 2017/11/25.
+//  Created by Yuya Horita on 2017/12/02.
 //  Copyright © 2017 Yuya Horita. All rights reserved.
 //
 
 import UIKit
-import SceneKit
+import ReactiveSwift
+import ReactiveCocoa
+import Result
 import ARKit
 
-final class ViewController: UIViewController, ARSCNViewDelegate {
-    @IBOutlet var sceneView: ARSCNView!
+final class ViewController: UIViewController {
+    @IBOutlet fileprivate weak var arView: ARSCNView!
+    fileprivate let virtualObject: SCNNode = .init()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        sceneView.delegate = self
-        sceneView.scene = SCNScene()
-        sceneView.debugOptions = [ARSCNDebugOptions.showFeaturePoints]
+        configure()
+        configureVirtualObject()
+        configureArSession()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        arView.session.pause()
+    }
+}
+
+private extension ViewController {
+    func configure() {
+        let tap = UITapGestureRecognizer()
+        arView.addGestureRecognizer(tap)
         
+        tap.reactive.stateChanged
+            .take(duringLifetimeOf: self)
+            .observeValues { [unowned self] in
+                let pos = $0.location(in: self.arView)
+                let results = self.arView.hitTest(pos, types: .existingPlaneUsingExtent)
+                
+                if let result = results.first {
+                    guard let anchor = result.anchor,
+                        let node = self.arView.node(for: anchor) else { return }
+                    
+                    node.childNodes.forEach {
+                        guard let plane = $0.geometry as? SCNPlane else { return }
+                        plane.materials.first?.diffuse.contents = UIColor.red
+                    }
+                }
+        }
+    }
+    
+    func configureVirtualObject() {
+        let scene = SCNScene(named: "art.scnassets/engel-1/engel.scn")!
+        scene.rootNode.childNodes.forEach { virtualObject.addChildNode($0) }
+    }
+    
+    func configureArSession() {
+        arView.scene = SCNScene(named: "art.scnassets/ship.scn")!
         let configuration = ARWorldTrackingConfiguration()
         configuration.planeDetection = .horizontal
-        sceneView.session.run(configuration)
-        sceneView.showsStatistics = true
+        arView.delegate = self
+        arView.debugOptions = [ARSCNDebugOptions.showFeaturePoints]
+        arView.session.run(configuration)
     }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        
-        sceneView.session.pause()
-    }
-    
+}
+
+extension ViewController: ARSCNViewDelegate {
     func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
         guard let planeAnchor = anchor as? ARPlaneAnchor else { return }
-        let plane = SCNPlane(width: .init(planeAnchor.extent.x), height: .init(planeAnchor.extent.z))
-        let planeNode = SCNNode(geometry: plane)
-        planeNode.simdPosition = float3(planeAnchor.center.x, 0, planeAnchor.center.z)
-        planeNode.eulerAngles.x = -.pi / 2
-        planeNode.opacity = 0.25
+        let geometry = SCNPlane(width: .init(planeAnchor.extent.x), height: .init(planeAnchor.extent.z))
+        geometry.materials.first?.diffuse.contents = UIColor.blue
         
-        node.addChildNode(planeNode)
+        let planeNode = SCNNode(geometry: geometry)
+        planeNode.transform = SCNMatrix4MakeRotation(-.pi / 2, 1, 0, 0)
+        
+        DispatchQueue.main.async {
+            node.addChildNode(planeNode)
+            node.addChildNode(self.virtualObject)
+        }
     }
-    
-    func renderer(_ renderer: SCNSceneRenderer, didUpdate node: SCNNode, for anchor: ARAnchor) {
-        guard let planeAnchor = anchor as? ARPlaneAnchor,
-            let planeNode = node.childNodes.first,
-            let plane = planeNode.geometry as? SCNPlane else { return }
+}
+
+extension ViewController: ARSessionDelegate {
+    func session(_ session: ARSession, didUpdate frame: ARFrame) {
         
-        planeNode.simdPosition = float3(planeAnchor.center.x, 0, planeAnchor.center.z)
-        plane.width = .init(planeAnchor.extent.x)
-        plane.height = .init(planeAnchor.extent.z)
     }
 }

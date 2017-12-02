@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  ARKitScratch
 //
-//  Created by Yuya Horita on 2017/11/25.
+//  Created by Yuya Horita on 2017/12/02.
 //  Copyright © 2017 Yuya Horita. All rights reserved.
 //
 
