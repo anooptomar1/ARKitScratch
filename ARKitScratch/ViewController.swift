@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import ReactiveSwift
+import ReactiveCocoa
+import Result
 import ARKit
 
 final class ViewController: UIViewController {
@@ -30,6 +33,23 @@ private extension ViewController {
     func configure() {
         let tap = UITapGestureRecognizer()
         arView.addGestureRecognizer(tap)
+        
+        tap.reactive.stateChanged
+            .take(duringLifetimeOf: self)
+            .observeValues { [unowned self] in
+                let pos = $0.location(in: self.arView)
+                let results = self.arView.hitTest(pos, types: .existingPlaneUsingExtent)
+                
+                if let result = results.first {
+                    guard let anchor = result.anchor,
+                        let node = self.arView.node(for: anchor) else { return }
+                    
+                    node.childNodes.forEach {
+                        guard let plane = $0.geometry as? SCNPlane else { return }
+                        plane.materials.first?.diffuse.contents = UIColor.red
+                    }
+                }
+        }
     }
     
     func configureVirtualObject() {
