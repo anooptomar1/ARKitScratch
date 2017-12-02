@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YFL-1b-iNA">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Measure View Controller-->
+        <scene sceneID="RKa-4d-rMv">
+            <objects>
+                <viewController id="YFL-1b-iNA" customClass="MeasureViewController" customModule="ARKitScratch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jZN-ha-G7t">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Measure ARKit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="72t-OT-ixh">
+                                <rect key="frame" x="67.5" y="450" width="241" height="42"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                                <color key="textColor" red="0.40000000600000002" green="1" blue="1" alpha="0.42834974320000002" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dls-9z-2nb" customClass="ARSCNView">
+                                <rect key="frame" x="0.0" y="20" width="375" height="400"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="LMM-Ec-fxy"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="72t-OT-ixh" firstAttribute="centerX" secondItem="jZN-ha-G7t" secondAttribute="centerX" id="Lkm-Dl-DUQ"/>
+                            <constraint firstItem="72t-OT-ixh" firstAttribute="top" secondItem="Dls-9z-2nb" secondAttribute="bottom" constant="30" id="Wcq-pR-0EO"/>
+                            <constraint firstItem="Dls-9z-2nb" firstAttribute="top" secondItem="nDD-l8-MG0" secondAttribute="top" id="bhi-q3-VwM"/>
+                            <constraint firstItem="Dls-9z-2nb" firstAttribute="leading" secondItem="nDD-l8-MG0" secondAttribute="leading" id="qaA-bF-Zg2"/>
+                            <constraint firstItem="nDD-l8-MG0" firstAttribute="trailing" secondItem="Dls-9z-2nb" secondAttribute="trailing" id="u1H-PB-k0g"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="nDD-l8-MG0"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="bVQ-tZ-Zt6">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="Ia4-Mi-koA"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="arView" destination="Dls-9z-2nb" id="FMe-hy-SMX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bsy-aT-5AI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="420" y="160.56971514242881"/>
+        </scene>
+    </scenes>
+</document>
