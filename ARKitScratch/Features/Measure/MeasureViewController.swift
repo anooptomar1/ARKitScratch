@@ -42,7 +42,7 @@ private extension MeasureViewController {
                 if let result = results.first {
                     let hitPosition = result.worldTransform.transpose
                     if let startNode = self.startNode {
-                        let endNode =
+                        
                     }
                 }
         }
