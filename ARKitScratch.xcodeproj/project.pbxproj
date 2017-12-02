@@ -7,27 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FA1CF11E1FC9B49000966235 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1CF11D1FC9B49000966235 /* AppDelegate.swift */; };
-		FA1CF1201FC9B49000966235 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = FA1CF11F1FC9B49000966235 /* art.scnassets */; };
-		FA1CF1221FC9B49000966235 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1CF1211FC9B49000966235 /* ViewController.swift */; };
-		FA1CF1251FC9B49000966235 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA1CF1231FC9B49000966235 /* Main.storyboard */; };
-		FA1CF1271FC9B49000966235 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA1CF1261FC9B49000966235 /* Assets.xcassets */; };
-		FA1CF12A1FC9B49000966235 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA1CF1281FC9B49000966235 /* LaunchScreen.storyboard */; };
+		FAD38D1F1FD28F9B00A9AC88 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD38D1E1FD28F9B00A9AC88 /* AppDelegate.swift */; };
+		FAD38D211FD28F9B00A9AC88 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD38D201FD28F9B00A9AC88 /* ViewController.swift */; };
+		FAD38D241FD28F9B00A9AC88 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAD38D221FD28F9B00A9AC88 /* Main.storyboard */; };
+		FAD38D261FD28F9B00A9AC88 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAD38D251FD28F9B00A9AC88 /* Assets.xcassets */; };
+		FAD38D291FD28F9B00A9AC88 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAD38D271FD28F9B00A9AC88 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		FA1CF11A1FC9B49000966235 /* ARKitScratch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARKitScratch.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		FA1CF11D1FC9B49000966235 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FA1CF11F1FC9B49000966235 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
-		FA1CF1211FC9B49000966235 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		FA1CF1241FC9B49000966235 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		FA1CF1261FC9B49000966235 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		FA1CF1291FC9B49000966235 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		FA1CF12B1FC9B49000966235 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAD38D1B1FD28F9B00A9AC88 /* ARKitScratch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARKitScratch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAD38D1E1FD28F9B00A9AC88 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FAD38D201FD28F9B00A9AC88 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FAD38D231FD28F9B00A9AC88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FAD38D251FD28F9B00A9AC88 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FAD38D281FD28F9B00A9AC88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FAD38D2A1FD28F9B00A9AC88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		FA1CF1171FC9B49000966235 /* Frameworks */ = {
+		FAD38D181FD28F9B00A9AC88 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -37,32 +35,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		FA1CF1111FC9B49000966235 = {
+		FAD38D121FD28F9B00A9AC88 = {
 			isa = PBXGroup;
 			children = (
-				FA1CF11C1FC9B49000966235 /* ARKitScratch */,
-				FA1CF11B1FC9B49000966235 /* Products */,
+				FAD38D1D1FD28F9B00A9AC88 /* ARKitScratch */,
+				FAD38D1C1FD28F9B00A9AC88 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		FA1CF11B1FC9B49000966235 /* Products */ = {
+		FAD38D1C1FD28F9B00A9AC88 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FA1CF11A1FC9B49000966235 /* ARKitScratch.app */,
+				FAD38D1B1FD28F9B00A9AC88 /* ARKitScratch.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		FA1CF11C1FC9B49000966235 /* ARKitScratch */ = {
+		FAD38D1D1FD28F9B00A9AC88 /* ARKitScratch */ = {
 			isa = PBXGroup;
 			children = (
-				FA1CF11D1FC9B49000966235 /* AppDelegate.swift */,
-				FA1CF11F1FC9B49000966235 /* art.scnassets */,
-				FA1CF1211FC9B49000966235 /* ViewController.swift */,
-				FA1CF1231FC9B49000966235 /* Main.storyboard */,
-				FA1CF1261FC9B49000966235 /* Assets.xcassets */,
-				FA1CF1281FC9B49000966235 /* LaunchScreen.storyboard */,
-				FA1CF12B1FC9B49000966235 /* Info.plist */,
+				FAD38D1E1FD28F9B00A9AC88 /* AppDelegate.swift */,
+				FAD38D201FD28F9B00A9AC88 /* ViewController.swift */,
+				FAD38D221FD28F9B00A9AC88 /* Main.storyboard */,
+				FAD38D251FD28F9B00A9AC88 /* Assets.xcassets */,
+				FAD38D271FD28F9B00A9AC88 /* LaunchScreen.storyboard */,
+				FAD38D2A1FD28F9B00A9AC88 /* Info.plist */,
 			);
 			path = ARKitScratch;
 			sourceTree = "<group>";
@@ -70,13 +67,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		FA1CF1191FC9B49000966235 /* ARKitScratch */ = {
+		FAD38D1A1FD28F9B00A9AC88 /* ARKitScratch */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FA1CF12E1FC9B49000966235 /* Build configuration list for PBXNativeTarget "ARKitScratch" */;
+			buildConfigurationList = FAD38D2D1FD28F9B00A9AC88 /* Build configuration list for PBXNativeTarget "ARKitScratch" */;
 			buildPhases = (
-				FA1CF1161FC9B49000966235 /* Sources */,
-				FA1CF1171FC9B49000966235 /* Frameworks */,
-				FA1CF1181FC9B49000966235 /* Resources */,
+				FAD38D171FD28F9B00A9AC88 /* Sources */,
+				FAD38D181FD28F9B00A9AC88 /* Frameworks */,
+				FAD38D191FD28F9B00A9AC88 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -84,26 +81,26 @@
 			);
 			name = ARKitScratch;
 			productName = ARKitScratch;
-			productReference = FA1CF11A1FC9B49000966235 /* ARKitScratch.app */;
+			productReference = FAD38D1B1FD28F9B00A9AC88 /* ARKitScratch.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		FA1CF1121FC9B49000966235 /* Project object */ = {
+		FAD38D131FD28F9B00A9AC88 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0900;
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Yuya Horita";
 				TargetAttributes = {
-					FA1CF1191FC9B49000966235 = {
+					FAD38D1A1FD28F9B00A9AC88 = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = FA1CF1151FC9B49000966235 /* Build configuration list for PBXProject "ARKitScratch" */;
+			buildConfigurationList = FAD38D161FD28F9B00A9AC88 /* Build configuration list for PBXProject "ARKitScratch" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -111,55 +108,54 @@
 				en,
 				Base,
 			);
-			mainGroup = FA1CF1111FC9B49000966235;
-			productRefGroup = FA1CF11B1FC9B49000966235 /* Products */;
+			mainGroup = FAD38D121FD28F9B00A9AC88;
+			productRefGroup = FAD38D1C1FD28F9B00A9AC88 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FA1CF1191FC9B49000966235 /* ARKitScratch */,
+				FAD38D1A1FD28F9B00A9AC88 /* ARKitScratch */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		FA1CF1181FC9B49000966235 /* Resources */ = {
+		FAD38D191FD28F9B00A9AC88 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA1CF1201FC9B49000966235 /* art.scnassets in Resources */,
-				FA1CF12A1FC9B49000966235 /* LaunchScreen.storyboard in Resources */,
-				FA1CF1271FC9B49000966235 /* Assets.xcassets in Resources */,
-				FA1CF1251FC9B49000966235 /* Main.storyboard in Resources */,
+				FAD38D291FD28F9B00A9AC88 /* LaunchScreen.storyboard in Resources */,
+				FAD38D261FD28F9B00A9AC88 /* Assets.xcassets in Resources */,
+				FAD38D241FD28F9B00A9AC88 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		FA1CF1161FC9B49000966235 /* Sources */ = {
+		FAD38D171FD28F9B00A9AC88 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA1CF1221FC9B49000966235 /* ViewController.swift in Sources */,
-				FA1CF11E1FC9B49000966235 /* AppDelegate.swift in Sources */,
+				FAD38D211FD28F9B00A9AC88 /* ViewController.swift in Sources */,
+				FAD38D1F1FD28F9B00A9AC88 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		FA1CF1231FC9B49000966235 /* Main.storyboard */ = {
+		FAD38D221FD28F9B00A9AC88 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				FA1CF1241FC9B49000966235 /* Base */,
+				FAD38D231FD28F9B00A9AC88 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		FA1CF1281FC9B49000966235 /* LaunchScreen.storyboard */ = {
+		FAD38D271FD28F9B00A9AC88 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				FA1CF1291FC9B49000966235 /* Base */,
+				FAD38D281FD28F9B00A9AC88 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -167,7 +163,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		FA1CF12C1FC9B49000966235 /* Debug */ = {
+		FAD38D2B1FD28F9B00A9AC88 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -224,7 +220,7 @@
 			};
 			name = Debug;
 		};
-		FA1CF12D1FC9B49000966235 /* Release */ = {
+		FAD38D2C1FD28F9B00A9AC88 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -274,7 +270,7 @@
 			};
 			name = Release;
 		};
-		FA1CF12F1FC9B49000966235 /* Debug */ = {
+		FAD38D2E1FD28F9B00A9AC88 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -289,7 +285,7 @@
 			};
 			name = Debug;
 		};
-		FA1CF1301FC9B49000966235 /* Release */ = {
+		FAD38D2F1FD28F9B00A9AC88 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -307,25 +303,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		FA1CF1151FC9B49000966235 /* Build configuration list for PBXProject "ARKitScratch" */ = {
+		FAD38D161FD28F9B00A9AC88 /* Build configuration list for PBXProject "ARKitScratch" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FA1CF12C1FC9B49000966235 /* Debug */,
-				FA1CF12D1FC9B49000966235 /* Release */,
+				FAD38D2B1FD28F9B00A9AC88 /* Debug */,
+				FAD38D2C1FD28F9B00A9AC88 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FA1CF12E1FC9B49000966235 /* Build configuration list for PBXNativeTarget "ARKitScratch" */ = {
+		FAD38D2D1FD28F9B00A9AC88 /* Build configuration list for PBXNativeTarget "ARKitScratch" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FA1CF12F1FC9B49000966235 /* Debug */,
-				FA1CF1301FC9B49000966235 /* Release */,
+				FAD38D2E1FD28F9B00A9AC88 /* Debug */,
+				FAD38D2F1FD28F9B00A9AC88 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = FA1CF1121FC9B49000966235 /* Project object */;
+	rootObject = FAD38D131FD28F9B00A9AC88 /* Project object */;
 }
