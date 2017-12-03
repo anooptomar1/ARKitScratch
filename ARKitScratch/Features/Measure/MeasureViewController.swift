@@ -32,20 +32,6 @@ private extension MeasureViewController {
     func configure() {
         let tap = UITapGestureRecognizer()
         arView.addGestureRecognizer(tap)
-        
-        tap.reactive.stateChanged
-            .take(duringLifetimeOf: self)
-            .observeValues { [unowned self] in
-                let position = $0.location(in: self.arView)
-                let results = self.arView.hitTest(position, types: [.existingPlane])
-                
-                if let result = results.first {
-                    let hitPosition = result.worldTransform.transpose
-                    if let startNode = self.startNode {
-                        
-                    }
-                }
-        }
     }
     
     func configureArSession() {

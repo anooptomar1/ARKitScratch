@@ -11,9 +11,14 @@ import ReactiveSwift
 import ReactiveCocoa
 import Result
 import ARKit
+import ReplayKit
 
 final class BasicViewController: UIViewController {
     @IBOutlet fileprivate weak var arView: ARSCNView!
+    @IBOutlet fileprivate weak var broadcastButton: UIButton!
+    
+    fileprivate var broadcastAVC: RPBroadcastActivityViewController?
+    fileprivate var broadcastController: RPBroadcastController?
     fileprivate let virtualObject: SCNNode = .init()
     
     static func instantiate() -> UIViewController {
@@ -53,6 +58,16 @@ private extension BasicViewController {
                 
                 self.arView.hitTest(pos)
                     .filter { self.virtualObject.childNodes.contains($0.node) }.first?.node.geometry?.materials.first?.diffuse.contents = UIColor.blue
+        }
+        
+        broadcastButton.reactive.controlEvents(.touchUpInside)
+            .take(duringLifetimeOf: self)
+            .observeValues { [unowned self] _ in
+                RPBroadcastActivityViewController.load { vc, error in
+                    self.broadcastAVC = vc
+                    self.broadcastAVC?.delegate = self
+                    self.present(self.broadcastAVC!, animated: true, completion: nil)
+                }
         }
     }
     
@@ -98,5 +113,12 @@ extension BasicViewController: ARSCNViewDelegate {
             node.addChildNode(planeNode)
             node.addChildNode(self.virtualObject)
         }
+    }
+}
+
+extension BasicViewController: RPBroadcastActivityViewControllerDelegate {
+    func broadcastActivityViewController(_ broadcastActivityViewController: RPBroadcastActivityViewController, didFinishWith broadcastController: RPBroadcastController?, error: Error?) {
+        broadcastAVC?.dismiss(animated: true, completion: nil)
+        self.broadcastController = broadcastController
     }
 }

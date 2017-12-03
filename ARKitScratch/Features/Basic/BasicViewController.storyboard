@@ -30,19 +30,26 @@
                                 <color key="textColor" red="0.40000000600000002" green="1" blue="1" alpha="0.42834974320000002" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nAg-ne-UKg">
+                                <rect key="frame" x="164" y="572" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="vZw-PH-ne0" firstAttribute="centerX" secondItem="5k1-tz-nsl" secondAttribute="centerX" id="GuK-Ot-A3O"/>
+                            <constraint firstItem="nAg-ne-UKg" firstAttribute="top" secondItem="vZw-PH-ne0" secondAttribute="bottom" constant="20" id="Q71-dc-bww"/>
                             <constraint firstItem="vZw-PH-ne0" firstAttribute="top" secondItem="wDf-ff-NL5" secondAttribute="bottom" constant="10" id="d6w-vP-ZBm"/>
                             <constraint firstItem="WOE-bx-Ob0" firstAttribute="trailing" secondItem="wDf-ff-NL5" secondAttribute="trailing" id="gjP-NC-q54"/>
                             <constraint firstItem="wDf-ff-NL5" firstAttribute="top" secondItem="5k1-tz-nsl" secondAttribute="top" id="o32-uA-dPJ"/>
+                            <constraint firstItem="nAg-ne-UKg" firstAttribute="centerX" secondItem="5k1-tz-nsl" secondAttribute="centerX" id="wBV-eN-AMw"/>
                             <constraint firstItem="wDf-ff-NL5" firstAttribute="leading" secondItem="WOE-bx-Ob0" secondAttribute="leading" id="zPg-zw-aSW"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="WOE-bx-Ob0"/>
                     </view>
                     <connections>
                         <outlet property="arView" destination="wDf-ff-NL5" id="XJa-iA-tcb"/>
+                        <outlet property="broadcastButton" destination="nAg-ne-UKg" id="L5t-4R-qha"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W2f-PW-JRF" userLabel="First Responder" sceneMemberID="firstResponder"/>
