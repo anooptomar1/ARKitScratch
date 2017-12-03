@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BKt-Gh-d03">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Video View Controller-->
+        <scene sceneID="TuF-fo-2Zn">
+            <objects>
+                <viewController id="BKt-Gh-d03" customClass="VideoViewController" customModule="ARKitScratch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8Dy-f9-Djt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Kw-Ye-nau" customClass="ARSCNView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="450"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="450" id="OUP-TL-lzg"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Video ARKit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oID-nC-xf1">
+                                <rect key="frame" x="90.5" y="460" width="194" height="42"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="RZg-TD-35p" firstAttribute="trailing" secondItem="0Kw-Ye-nau" secondAttribute="trailing" id="2rG-Ob-thF"/>
+                            <constraint firstItem="0Kw-Ye-nau" firstAttribute="top" secondItem="8Dy-f9-Djt" secondAttribute="top" id="47F-tE-2Dj"/>
+                            <constraint firstItem="oID-nC-xf1" firstAttribute="centerX" secondItem="8Dy-f9-Djt" secondAttribute="centerX" id="5FQ-TJ-zGP"/>
+                            <constraint firstItem="0Kw-Ye-nau" firstAttribute="leading" secondItem="RZg-TD-35p" secondAttribute="leading" id="90G-Fn-mbW"/>
+                            <constraint firstItem="oID-nC-xf1" firstAttribute="top" secondItem="0Kw-Ye-nau" secondAttribute="bottom" constant="10" id="t5y-NF-B8G"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="RZg-TD-35p"/>
+                    </view>
+                    <connections>
+                        <outlet property="arView" destination="0Kw-Ye-nau" id="qOA-1u-07N"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C4q-00-soT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-162.40000000000001" y="145.27736131934034"/>
+        </scene>
+    </scenes>
+</document>

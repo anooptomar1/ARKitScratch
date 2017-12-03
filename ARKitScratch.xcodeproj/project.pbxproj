@@ -17,6 +17,8 @@
 		FA07D8D61FD2F070000DEC6E /* BasicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA07D8D51FD2F070000DEC6E /* BasicViewController.swift */; };
 		FA07D8D81FD2F07A000DEC6E /* BasicViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA07D8D71FD2F07A000DEC6E /* BasicViewController.storyboard */; };
 		FA07D8DB1FD2F19D000DEC6E /* SceneManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA07D8DA1FD2F19D000DEC6E /* SceneManager.swift */; };
+		FA07D8DE1FD43AEE000DEC6E /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA07D8DD1FD43AEE000DEC6E /* VideoViewController.swift */; };
+		FA07D8E01FD43AFD000DEC6E /* VideoViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA07D8DF1FD43AFD000DEC6E /* VideoViewController.storyboard */; };
 		FAD38D1F1FD28F9B00A9AC88 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD38D1E1FD28F9B00A9AC88 /* AppDelegate.swift */; };
 		FAD38D211FD28F9B00A9AC88 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD38D201FD28F9B00A9AC88 /* ViewController.swift */; };
 		FAD38D241FD28F9B00A9AC88 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAD38D221FD28F9B00A9AC88 /* Main.storyboard */; };
@@ -38,6 +40,8 @@
 		FA07D8D51FD2F070000DEC6E /* BasicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicViewController.swift; sourceTree = "<group>"; };
 		FA07D8D71FD2F07A000DEC6E /* BasicViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BasicViewController.storyboard; sourceTree = "<group>"; };
 		FA07D8DA1FD2F19D000DEC6E /* SceneManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneManager.swift; sourceTree = "<group>"; };
+		FA07D8DD1FD43AEE000DEC6E /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
+		FA07D8DF1FD43AFD000DEC6E /* VideoViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = VideoViewController.storyboard; sourceTree = "<group>"; };
 		FAD38D1B1FD28F9B00A9AC88 /* ARKitScratch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARKitScratch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAD38D1E1FD28F9B00A9AC88 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAD38D201FD28F9B00A9AC88 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +84,7 @@
 		FA07D8C31FD2E25C000DEC6E /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				FA07D8DC1FD43ADC000DEC6E /* Video */,
 				FA07D8D91FD2F187000DEC6E /* Common */,
 				FA07D8D41FD2F032000DEC6E /* Basic */,
 				FA07D8C91FD2E475000DEC6E /* Home */,
@@ -123,6 +128,15 @@
 				FA07D8DA1FD2F19D000DEC6E /* SceneManager.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		FA07D8DC1FD43ADC000DEC6E /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				FA07D8DD1FD43AEE000DEC6E /* VideoViewController.swift */,
+				FA07D8DF1FD43AFD000DEC6E /* VideoViewController.storyboard */,
+			);
+			path = Video;
 			sourceTree = "<group>";
 		};
 		FAD38D121FD28F9B00A9AC88 = {
@@ -225,6 +239,7 @@
 				FA07D8C81FD2E29C000DEC6E /* MeasureViewController.storyboard in Resources */,
 				FA07D8CD1FD2E48D000DEC6E /* HomeViewController.storyboard in Resources */,
 				FAFF229D1FD292B9005D97B2 /* art.scnassets in Resources */,
+				FA07D8E01FD43AFD000DEC6E /* VideoViewController.storyboard in Resources */,
 				FAD38D261FD28F9B00A9AC88 /* Assets.xcassets in Resources */,
 				FA07D8D81FD2F07A000DEC6E /* BasicViewController.storyboard in Resources */,
 				FAD38D241FD28F9B00A9AC88 /* Main.storyboard in Resources */,
@@ -288,6 +303,7 @@
 			files = (
 				FA07D8C61FD2E290000DEC6E /* MeasureViewController.swift in Sources */,
 				FA07D8D61FD2F070000DEC6E /* BasicViewController.swift in Sources */,
+				FA07D8DE1FD43AEE000DEC6E /* VideoViewController.swift in Sources */,
 				FA07D8CF1FD2E526000DEC6E /* FeatureView.swift in Sources */,
 				FA07D8DB1FD2F19D000DEC6E /* SceneManager.swift in Sources */,
 				FAD38D211FD28F9B00A9AC88 /* ViewController.swift in Sources */,
