@@ -13,6 +13,7 @@ import Result
 enum Scene {
     case basic
     case measure
+    case video
     case unknown
 }
 

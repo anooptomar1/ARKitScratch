@@ -26,8 +26,8 @@ final class HomeViewController: UIViewController {
 
 private extension HomeViewController {
     func configure() {
-        let title: [String] = ["Basic", "Measure", "coming soon", "coming soon"]
-        let scenes: [Scene] = [.basic, .measure, .unknown, .unknown]
+        let title: [String] = ["Basic", "Measure", "Video", "coming soon"]
+        let scenes: [Scene] = [.basic, .measure, .video, .unknown]
         let models = zip(title, scenes).map(FeatureModel.init(title:scene:))
         
         showcase.layout.itemSize = .init(width: 300, height: 300)
@@ -45,6 +45,10 @@ private extension HomeViewController {
                     
                 case .measure:
                     let vc = MeasureViewController.instantiate()
+                    self.navigationController?.pushViewController(vc, animated: true)
+                    
+                case .video:
+                    let vc = VideoViewController.instantiate()
                     self.navigationController?.pushViewController(vc, animated: true)
                     
                 case .unknown:
