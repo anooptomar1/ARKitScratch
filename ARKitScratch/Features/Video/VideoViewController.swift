@@ -61,6 +61,7 @@ private extension VideoViewController {
         skScene.size = .init(width: 1024, height: 1024)
         
         let skVideoNode = SKVideoNode(avPlayer: player)
+        
         skVideoNode.size = .init(width: 1024, height: 1024)
         skVideoNode.position = .init(x: 512, y: 512)
         
