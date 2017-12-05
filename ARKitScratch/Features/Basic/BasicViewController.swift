@@ -108,6 +108,7 @@ extension BasicViewController: ARSCNViewDelegate {
         
         let planeNode = SCNNode(geometry: geometry)
         planeNode.transform = SCNMatrix4MakeRotation(-.pi / 2, 1, 0, 0)
+        virtualObject.transform = SCNMatrix4MakeRotation(.pi / 2, 0, 1, 0)
         
         DispatchQueue.main.async {
             node.addChildNode(planeNode)
